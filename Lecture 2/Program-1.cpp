@@ -21,11 +21,14 @@ int main()
     // int size = sizeof(d);
     // cout << "Size of variable: " << size << " bytes" << endl;
 
-    int a = 'a';
-    cout << a << endl;
+    // int a = 'a';
+    // cout << a << endl;
 
-    char ch = 98;
-    cout << ch << endl;
+    // char ch = 98;
+    // cout << ch << endl;
+
+    int a = 12;
+    cout << !a << endl;
 
     return 0;
 }
