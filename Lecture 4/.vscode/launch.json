@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "g:/My Drive/DSA Course/Lecture  4",
-      "program": "g:/My Drive/DSA Course/Lecture  4/build/Debug/outDebug",
+      "cwd": "g:/My Drive/DSA Course/Lecture 4",
+      "program": "g:/My Drive/DSA Course/Lecture 4/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
