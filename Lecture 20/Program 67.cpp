@@ -1,64 +1,76 @@
-// Reverse array
-// #include <iostream>
-// #include <vector>
+// LeetCode - 88. Merge Sorted Array
+
+// You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.Merge nums1 and nums2 into a single array sorted in non - decreasing order.The final sorted array should not be returned by the function,but instead be stored inside the array nums1.To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored.nums2 has a length of n.
+
+// #include<iostream>
+// #include<vector>
 // using namespace std;
 
-// vector<int> reverse(vector<int> v)
-// {
+// void merge(int arr1[], int n, int arr2[], int m, int arr3[]) {
 
-//     int s = 0, e = v.size() - 1;
-
-//     while (s <= e)
-//     {
-//         swap(v[s], v[e]);
-//         s++;
-//         e--;
+//     int i = 0, j = 0;
+//     int k = 0;
+//     while( i<n && j<m) {
+//         if(arr1[i] < arr2[j]){
+//             arr3[k++] = arr1[i++];
+//         }
+//         else{
+//             arr3[k++] = arr2[j++];
+//         }
 //     }
 
-//     return v;
+//     //copy first array k element ko
+//     while(i<n) {
+//         arr3[k++] = arr1[i++];
+//     }
+
+//     //copy kardo second array k remaining element ko
+//     while(j<m) {
+//         arr2[k++] = arr2[j++];
+//     }
 // }
 
-// void print(vector<int> v)
-// {
-
-//     for (int i = 0; i < v.size(); i++)
-//     {
-//         cout << v[i] << " ";
+// void print(int ans[], int n) {
+//     for(int i=0; i<n; i++) {
+//         cout<< ans[i] <<" ";
 //     }
 //     cout << endl;
 // }
 
-// int main()
-// {
+// int main() {
 
-//     vector<int> v;
+//     int arr1[5] = {1,3,5,7,9};
+//     int arr2[3] = {2,4,6};
 
-//     v.push_back(11);
-//     v.push_back(7);
-//     v.push_back(3);
-//     v.push_back(12);
-//     v.push_back(4);
+//     int arr3[8] = {0};
 
-//     vector<int> ans = reverse(v);
+//     merge(arr1, 5, arr2, 3, arr3);
 
-//     cout << "Printing reverse Array" << endl;
-//     print(ans);
+//     print(arr3, 8);
 
 //     return 0;
 // }
 
-// CodeStudio - Reverse Array
-//  https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio3
+// Time Limit exceeds
+// class Solution {
+// public:
+//     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+//         int i = m - 1;
+//         int j = n - 1;
+//         int k = m + n - 1;
 
-// #include <bits/stdc++.h>
+//         // Merge nums1 and nums2 from the end
+//         while (i >= 0 && j >= 0) {
+//             if (nums1[i] > nums2[j]) {
+//                 nums1[k--] = nums1[i--];
+//             } else {
+//                 nums1[k--] = nums2[j--];
+//             }
+//         }
 
-// void reverseArray(vector<int> &arr , int m)
-// {
-//     int s = m+1, e = arr.size()-1;
-
-// 	while(s<=e){
-// 		swap(arr[s],arr[e]);
-// 		s++;
-// 		e--;
-// 	}
-// }
+//         // If there are remaining elements in nums2, copy them into nums1
+//         while (j >= 0) {
+//             nums1[k--] = nums2[j--];
+//         }
+//     }
+// };
