@@ -27,6 +27,7 @@
 // Time Limit exceeds
 
 // Aliter
+// Sieve of eratosthenes Process
 class Solution
 {
 public:
