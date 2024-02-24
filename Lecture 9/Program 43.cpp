@@ -6,12 +6,12 @@ void update(int arr[], int n)
          << "Inside the function" << endl;
 
     // Printing the array
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 2; i++)
     {
         cout << arr[i] << " ";
     }
     cout << endl;
-    cout << "Going back to main fubction" << endl;
+    cout << "Going back to main function" << endl;
 }
 int main()
 {

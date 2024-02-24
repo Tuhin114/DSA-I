@@ -23,7 +23,7 @@ int main()
     // accessing an array
     cout << "Value at 14 index " << number[14] << endl;
 
-    // cout << "Value at 20 index " << number[20] << endl;
+    cout << "Value at 20 index " << number[20] << endl;
 
     // initialising an array
     int second[3] = {5, 7, 11};
@@ -34,7 +34,7 @@ int main()
     int third[15] = {2, 7};
 
     int n = 15;
-    // printArray(third, 15);
+    printArray(third, 15);
     int thirdSize = sizeof(third) / sizeof(int);
     cout << " Size of Third is " << thirdSize << endl;
 
@@ -48,7 +48,7 @@ int main()
     int fifth[10] = {1};
 
     n = 10;
-    // printArray(fifth, 10);
+    printArray(fifth, 10);
 
     int fifthSize = sizeof(fifth) / sizeof(int);
     cout << " Size of Fifth is " << fifthSize << endl;
@@ -63,9 +63,9 @@ int main()
         cout << ch[i] << " ";
     }
     cout << " printing DONE " << endl;
-    double firstDouble[5];
-    float firstFloat[6];
-    bool firstBool[9];
+    // double firstDouble[5];
+    // float firstFloat[6];
+    // bool firstBool[9];
 
     cout << endl
          << " Everything is Fine " << endl
