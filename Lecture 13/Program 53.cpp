@@ -51,3 +51,48 @@
 
 //     return p;
 // }
+
+// Optimal & better code
+/**
+ pair<int, int> solve(int mid, vector<int> &arr, int k) {
+    int low = mid;
+    int high = mid;
+    pair<int, int> ans;
+    while(low >= 0 && arr[low] == k){
+        low--;
+    }
+    while(high < arr.size() && arr[high] == k){
+        high++;
+    }
+
+    ans.first = low + 1;
+    ans.second = high - 1;
+
+    return ans;
+}
+
+pair<int, int> firstAndLastPosition(vector<int>& arr, int n, int k)
+{
+    pair<int,int> p;
+    int i = 0;
+    int j = n - 1;
+
+    while(i <= j){
+        int mid = i + (j - i)/2;
+        if(arr[mid] == k){
+            return solve(mid, arr, k);
+        }else if (arr[mid] > k){
+            j = mid - 1;
+        }else{
+            i = mid + 1;
+        }
+    }
+
+
+    p.first = -1;
+    p.second = -1;
+
+    return p;
+}
+
+*/
