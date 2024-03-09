@@ -6,16 +6,16 @@ int main()
 
     int num = 5;
 
-    cout << num << endl;
+    cout << "Value of num before pointer initialization is : " << num << endl;
 
     // address of Operator - &
 
-    cout << " address of num is " << &num << endl;
+    cout << "Address of num before pointer initialization is : " << &num << endl;
 
     int *ptr = &num;
 
-    cout << "Address is : " << ptr << endl;
-    cout << "value is : " << *ptr << endl;
+    cout << "Address of num after pointer initialization is : " << ptr << endl;
+    cout << "Value of num after pointer initialization is : " << *ptr << endl;
 
     double d = 4.3;
     double *p2 = &d;
